@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>payments</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240712064125">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20240712064125" />
+
+	<script>
+		window.addEventListener('DOMContentLoaded', () => {
+
+			const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+				let swiper;
+
+				breakpoint = window.matchMedia(breakpoint);
+
+				const enableSwiper = function(className, settings) {
+					swiper = new Swiper(className, settings);
+
+					if (callback) {
+						callback(swiper);
+					}
+				}
+
+				const checker = function() {
+					if (breakpoint.matches) {
+						return enableSwiper(swiperClass, swiperSettings);
+					} else {
+						if (swiper !== undefined) swiper.destroy(true, true);
+						return;
+					}
+				};
+
+				breakpoint.addEventListener('change', checker);
+				checker();
+			}
+
+			resizableSwiper(
+				'(max-width: 880px)',
+				'.payment__slider', {
+					// loop: false,
+					spaceBetween: 10,
+					slidesPerView: 'auto',
+					// loop: true,
+					freeMode: true,
+
+					breakpoints: {
+
+						320: {
+							spaceBetween: 10,
+							// slidesPerView: 1.1,
+							slidesPerView: 'auto',
+							centeredSlides: false,
+							freeMode: true,
+							// loop: true,
+
+						},
+
+						480: {
+							spaceBetween: 10,
+							// slidesPerView: 1.1,
+							slidesPerView: 'auto',
+							centeredSlides: true,
+							freeMode: false,
+							// loop: false,
+
+						},
+
+						768: {
+							spaceBetween: 15,
+							//   slidesPerView: 3,
+							slidesPerView: 'auto',
+
+						},
+
+						880: {
+							spaceBetween: 20,
+							//   slidesPerView: 3,
+							slidesPerView: 'auto',
+
+						}
+					},
+
+					navigation: {
+						prevEl: '.payments__btn-prev',
+						nextEl: '.payments__btn-next',
+					},
+				}
+			);
+		});
+	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?_v=20240712064125" defer></script>
+</head>
+
+<body class="body">
+	<div class="wrapper">
+
+		<header class="header article-header">
+			<div class="header__payment-container header__container container">
+				<div class="header__inner">
+					<a href="index.html" class="header__logo logo">
+						<p class="header__logo-text">Veera</p>
+						<span>limited</span>
+					</a>
+
+					<ul class="header__nav-list">
+
+						<div class="header-dropdown" data-da=".menu__body,880,0">
+
+							<div class="header-dropdown__btn">
+								<span class="header-dropdown__active">Affilate programs</span>
+								<span class="header-dropdown__arrow"></span>
+							</div>
+
+							<div class="dropdown-list">
+								<a class="header-dropdown__link" href="allprograms__page.html">
+									<span class="header-dropdown__link-name">All Programs</span>
+								</a>
+
+								<a class="header-dropdown__link" href="strategy__page.html">
+									<span class="header-dropdown__link-name">Affiliate Program Strategy Development</span>
+								</a>
+
+								<a class="header-dropdown__link" href="technical__page.html">
+									<span class="header-dropdown__link-name">Technical Setup and Integration</span>
+								</a>
+
+								<a class="header-dropdown__link" href="marketing__page.html">
+									<span class="header-dropdown__link-name">Marketing and Partner Recruitment</span>
+								</a>
+
+								<a class="header-dropdown__link" href="partner__page.html">
+									<span class="header-dropdown__link-name">Partner Support and Training</span>
+								</a>
+
+								<a class="header-dropdown__link" href="analytics__page.html">
+									<span class="header-dropdown__link-name">Analytics and Optimization of the Affiliate Program</span>
+								</a>
+
+								<a class="header-dropdown__link" href="affiliate__page.html">
+									<span class="header-dropdown__link-name">Affiliate Program Management System</span>
+								</a>
+							</div>
+						</div>
+
+						<li class="header__nav-item">
+							<a class="header__nav-link" href="ai__page.html">AI consulting</a>
+						</li>
+
+						<li class="header__nav-item">
+							<a class="header__nav-link" href="blockchain__page.html">Blockchain development</a>
+						</li>
+
+						<li class="header__nav-item">
+							<a class="header__nav-link" href="blog__page.html">Blog</a>
+						</li>
+
+						<li class="header__nav-item">
+							<a class="header__nav-link" href="press__page.html">News</a>
+						</li>
+
+					</ul>
+
+					<div class="header__controls">
+						<!-- <a class="header__btn btn" href="#">
+								Payment
+								<span class="header__btn-count">0</span>
+							</a> -->
+					</div>
+
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+
+					<div class="header__menu menu">
+
+						<nav class="menu__body menu__body--small">
+							<div class="header__menu-controls">
+								<a class="header__menu-btn btn" href="#">AI consulting</a>
+								<a class="header__menu-btn btn" href="#">Blockchain development</a>
+								<a class="header__menu-btn btn" href="#">Blog</a>
+								<a class="header__menu-btn btn" href="#">News</a>
+							</div>
+
+							<div class="menu__body-social">
+								<a href="#" class="menu__body-social-link">
+									<svg width=20 height=20>
+										<use xlink:href="img/icons/icons.svg#telegram"></use>
+									</svg>
+
+									@VeeraLimited
+								</a>
+
+								<a href="#" class="menu__body-social-link">
+									<svg width=20 height=20>
+										<use xlink:href="img/icons/icons.svg#google"></use>
+									</svg>
+
+									help@veera.limited
+								</a>
+							</div>
+						</nav>
+
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		<main class="page">
+			<section class="payments__section">
+				<div class="payments__container container">
+					<div class="payments__inner">
+
+						<div class="payments__content">
+							<div class="payments__content-top">
+								<h1 class="payments__content-title payments__title">payments</h1>
+								<div class="payments__top-box">
+									<span class="payments__top-label">Section</span>
+									<div class="payments__top-category">Blockchain Development and consulting</div>
+								</div>
+							</div>
+
+							<div class="payments__slider-content">
+
+								<div class="payment__slider swiper">
+									<div class="payment__slider-wrapper swiper-wrapper grid-12">
+										<div class="payment__slide swiper-slide">
+											<div class="payments__cards-item">
+												<h3 class="payments__cards-title">Blockchain Consultation Package</h3>
+
+												<div class="payments__cards-list">
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															10 hours of expert consultation
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															High-level blockchain strategy outline
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Identification of potential use cases
+														</p>
+													</div>
+
+												</div>
+
+												<div class="payments__cards-bottom">
+													<div class="payments__cards-price">
+														<span>Price: $</span>
+														<span class="payments__cards-monay">500</span>
+														<span></span>
+													</div>
+													<button class="payments__cards-btn">
+														<svg class="payments__cards-plus">
+															<use xlink:href="img/icons/icons.svg#+"></use>
+														</svg>
+
+														<svg class="payments__cards-check">
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<svg class="payments__cards-close">
+															<use xlink:href="img/icons/icons.svg#+"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<div class="payment__slide swiper-slide">
+											<div class="payments__cards-item">
+												<h3 class="payments__cards-title">Blockchain Feasibility Study Package</h3>
+
+												<div class="payments__cards-list">
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															25 hours of consultation and analysis
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Technical feasibility assessment
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Cost-benefit analysis
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Preliminary project roadmap
+														</p>
+													</div>
+
+												</div>
+
+												<div class="payments__cards-bottom">
+													<div class="payments__cards-price">
+														<span>Price: $</span>
+														<span class="payments__cards-monay">1 000</span>
+														<span></span>
+													</div>
+													<button class="payments__cards-btn">
+														<svg class="payments__cards-plus">
+															<use xlink:href="img/icons/icons.svg#+"></use>
+														</svg>
+
+														<svg class="payments__cards-check">
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<svg class="payments__cards-close">
+															<use xlink:href="img/icons/icons.svg#+"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<div class="payment__slide swiper-slide">
+											<div class="payments__cards-item">
+												<h3 class="payments__cards-title">Smart Contract Development Package</h3>
+
+												<div class="payments__cards-list">
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															50 hours of development and consultation
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Design and implementation of a smart contract
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Initial testing and deployment
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Custom-designed marketing materials
+														</p>
+													</div>
+
+												</div>
+
+												<div class="payments__cards-bottom">
+													<div class="payments__cards-price">
+														<span>Price: $</span>
+														<span class="payments__cards-monay">12 000</span>
+														<span>/month</span>
+													</div>
+													<button class="payments__cards-btn">
+														<svg class="payments__cards-plus">
+															<use xlink:href="img/icons/icons.svg#+"></use>
+														</svg>
+
+														<svg class="payments__cards-check">
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<svg class="payments__cards-close">
+															<use xlink:href="img/icons/icons.svg#+"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<div class="payment__slide swiper-slide">
+											<div class="payments__cards-item">
+												<h3 class="payments__cards-title">Blockchain Prototype Development Package</h3>
+
+												<div class="payments__cards-list">
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															125 hours of development and consultation
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Prototype design and implementation
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Initial performance testing
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Detailed documentation
+														</p>
+													</div>
+
+												</div>
+
+												<div class="payments__cards-bottom">
+													<div class="payments__cards-price">
+														<span>Price: $</span>
+														<span class="payments__cards-monay">5 000</span>
+														<span></span>
+													</div>
+													<button class="payments__cards-btn">
+														<svg class="payments__cards-plus">
+															<use xlink:href="img/icons/icons.svg#+"></use>
+														</svg>
+
+														<svg class="payments__cards-check">
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<svg class="payments__cards-close">
+															<use xlink:href="img/icons/icons.svg#+"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<div class="payment__slide swiper-slide">
+											<div class="payments__cards-item">
+												<h3 class="payments__cards-title">Enterprise Plan</h3>
+
+												<div class="payments__cards-list">
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															250 hours of expert consultation, development, and support
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Custom blockchain solution design and implementation
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Full integration with existing systems
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Extensive testing and optimization
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Comprehensive documentation and training
+														</p>
+													</div>
+
+													<div class="payments__cards-punkt">
+														<svg width=15 height=15>
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<p>
+															Ongoing support and maintenance for 3 months
+														</p>
+													</div>
+
+												</div>
+
+												<div class="payments__cards-bottom">
+													<div class="payments__cards-price">
+														<span>Price: $</span>
+														<span class="payments__cards-monay">6 000</span>
+														<span>/month</span>
+													</div>
+													<button class="payments__cards-btn">
+														<svg class="payments__cards-plus">
+															<use xlink:href="img/icons/icons.svg#+"></use>
+														</svg>
+
+														<svg class="payments__cards-check">
+															<use xlink:href="img/icons/icons.svg#check"></use>
+														</svg>
+
+														<svg class="payments__cards-close">
+															<use xlink:href="img/icons/icons.svg#+"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="payments__slider-controls">
+									<button class="payments__btn-prev">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-prev"></use>
+										</svg>
+									</button>
+
+									<button class="payments__btn-next">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#arrow-next"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+
+							<div class="payments__controls">
+								<div class="payments__total">total: <span>8 000</span> $</div>
+
+								<button class="payments__buy">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#buy"></use>
+									</svg>
+
+									<span>4</span>
+								</button>
+							</div>
+						</div>
+
+						<aside class="payments__aside">
+							<div class="payments__aside-top">
+								<h2 class="payments__aside-title payments__title">My products</h2>
+								<button class="payments__aside-close">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#+"></use>
+									</svg>
+								</button>
+							</div>
+
+							<div class="payments__aside-body">
+								<div class="payments__aside-item">
+									<div class="payments__aside-box">
+										<h3 class="payments__aside-product">Affiliate program <br> strategy development</h3>
+										<p class="payments__aside-tariff">
+											Tariff: Stuptup plan
+										</p>
+									</div>
+
+									<div class="payments__aside-price">3 000 <span>$</span></div>
+
+									<button class="payments__aside-delete">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#+"></use>
+										</svg>
+									</button>
+								</div>
+
+								<div class="payments__aside-item">
+									<div class="payments__aside-box">
+										<h3 class="payments__aside-product">AI consulting and development</h3>
+										<p class="payments__aside-tariff">
+											Tariff: AI prototype development package
+										</p>
+									</div>
+
+									<div class="payments__aside-price">5 000 <span>$</span></div>
+
+									<button class="payments__aside-delete">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#+"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+
+							<div class="payments__aside-bottom">
+								<div class="payments__aside-inner">
+									<div class="payments__aside-total">Total</div>
+									<div class="payments__aside-monay">800 <span>$</span></div>
+								</div>
+
+								<a href="order__page.html" class="payments__aside-checkout">Checkout</a>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<script src="js/app.min.js?_v=20240712064125"></script>;
+	</script>
+</body>
+
+</html>
