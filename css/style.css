@@ -2024,7 +2024,7 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
 
 .header._hide {
   background-color: #00519E;
-  opacity: 0.9;
+  opacity: 0.96;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -6244,8 +6244,22 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
           flex: 0 0 16px;
 }
 
+.checkbox__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .order-checkbox__label a {
   color: #00519E;
+  white-space: nowrap;
+}
+
+.order-checkbox__label span {
+  white-space: nowrap;
+  width: 100%;
 }
 
 .order__bottom {
@@ -7865,7 +7879,7 @@ button.swiper-pagination-bullet {
   }
 
   .index-facts__counters-wrapper--2 {
-    margin-top: 0;
+    margin-top: 0 !important;
   }
 
   .marketing-process__inner {
