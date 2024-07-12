@@ -3831,11 +3831,6 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
   max-width: 875px;
 }
 
-.analytics-intro__title {
-  text-align: left;
-  margin-right: auto;
-}
-
 .analytics-intro__content {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -3929,6 +3924,16 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
 .analitics-process__item-text span {
   font-weight: 500;
   color: #000;
+}
+
+.analytics-intro__title {
+  text-align: left;
+  margin-right: auto;
+  color: #EFEFEF;
+  font-family: "BebasNeue";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%;
 }
 
 .analytics-importance__section {
@@ -5595,6 +5600,13 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
   pointer-events: none;
 }
 
+.payment__slide {
+  max-width: 325px;
+  height: auto !important;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
 .grid-12 {
   display: -ms-grid;
   display: grid;
@@ -6233,12 +6245,23 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
           flex: 0 0 16px;
 }
 
-.checkbox__label {
+.order-checkbox__label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.order-checkbox__label span {
+  width: auto;
+}
+
+.order-checkbox__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
 }
 
 .order-checkbox__label a {
@@ -6248,7 +6271,17 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
 
 .order-checkbox__label span {
   white-space: nowrap;
-  width: 100%;
+  width: auto;
+}
+
+.checkbox__label {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.checkbox__label span {
+  white-space: nowrap;
+  width: auto;
 }
 
 .order__bottom {
@@ -7367,10 +7400,6 @@ button.swiper-pagination-bullet {
     font-size: 1.5rem;
   }
 
-  .analytics-intro__title {
-    font-size: 10rem;
-  }
-
   .analitics-process__top {
     margin-bottom: 5rem;
   }
@@ -7381,6 +7410,10 @@ button.swiper-pagination-bullet {
 
   .analitics-process__item-center {
     font-size: 1.25rem;
+  }
+
+  .analytics-intro__title {
+    font-size: 10rem;
   }
 
   .analytics-what__top-text {
@@ -8050,7 +8083,7 @@ button.swiper-pagination-bullet {
   }
 
   .payment__slider {
-    width: calc(100vw - 10px);
+    min-width: 100vw;
     height: auto !important;
     max-width: 325px;
   }
@@ -9623,15 +9656,6 @@ button.swiper-pagination-bullet {
     font-size: 1rem;
   }
 
-  .analytics-intro__title {
-    font-size: 4.0625rem;
-  }
-
-  .analytics-intro__title {
-    text-align: center;
-    margin: 0 auto;
-  }
-
   .analitics-process__top {
     margin-bottom: 2.5rem;
   }
@@ -9642,6 +9666,15 @@ button.swiper-pagination-bullet {
 
   .analitics-process__body {
     gap: 45px;
+  }
+
+  .analytics-intro__title {
+    font-size: 3.75rem;
+  }
+
+  .analytics-intro__title {
+    text-align: center;
+    margin: 0 auto;
   }
 
   .analytics-what__top-text {
@@ -10250,18 +10283,6 @@ button.swiper-pagination-bullet {
     }
 }
 
-@supports (font-size: clamp( 4.0625rem , 0.1043957316rem  +  10.9951158538vw , 10rem )) {
-    .analytics-intro__title {
-      font-size: clamp( 4.0625rem , 0.1043957316rem  +  10.9951158538vw , 10rem );
-    }
-}
-
-@supports not (font-size: clamp( 4.0625rem , 0.1043957316rem  +  10.9951158538vw , 10rem )) {
-    .analytics-intro__title {
-      font-size: calc(4.0625rem + 5.9375 * (100vw - 35.99875rem) / 54.00125);
-    }
-}
-
 @supports (margin-bottom: clamp( 2.5rem , 0.8334297817rem  +  4.6295224648vw , 5rem )) {
     .analitics-process__top {
       margin-bottom: clamp( 2.5rem , 0.8334297817rem  +  4.6295224648vw , 5rem );
@@ -10283,6 +10304,18 @@ button.swiper-pagination-bullet {
 @supports not (font-size: clamp( 2.5rem , 1.6667148909rem  +  2.3147612324vw , 3.75rem )) {
     .analitics-process__top h2 {
       font-size: calc(2.5rem + 1.25 * (100vw - 35.99875rem) / 54.00125);
+    }
+}
+
+@supports (font-size: clamp( 3.75rem , -0.4164255457rem  +  11.5738061619vw , 10rem )) {
+    .analytics-intro__title {
+      font-size: clamp( 3.75rem , -0.4164255457rem  +  11.5738061619vw , 10rem );
+    }
+}
+
+@supports not (font-size: clamp( 3.75rem , -0.4164255457rem  +  11.5738061619vw , 10rem )) {
+    .analytics-intro__title {
+      font-size: calc(3.75rem + 6.25 * (100vw - 35.99875rem) / 54.00125);
     }
 }
 
