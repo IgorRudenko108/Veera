@@ -5358,8 +5358,8 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
   right: 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  height: calc(100dvh - 75px);
   height: 100dvh;
-  top: -70px;
   right: -10px;
   min-height: 500px;
 }
@@ -9172,8 +9172,8 @@ button.swiper-pagination-bullet {
     min-height: calc(100dvh - 60px);
   }
 
-  .payments__aside._active {
-    top: -60px;
+  .payments__controls {
+    width: calc(100vw - 30px);
   }
 
   .order__form {
