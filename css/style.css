@@ -2053,6 +2053,10 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
       flex-wrap: wrap;
 }
 
+.footer__logo {
+  z-index: 1;
+}
+
 .footer__logo p {
   font-size: 55px;
   color: #fff;
@@ -3630,9 +3634,9 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: end !important;
+      -ms-flex-pack: end !important;
+          justify-content: flex-end !important;
 }
 
 .marketing-tariff__item-price {
@@ -3823,6 +3827,12 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
 
 .analytics-intro__text {
   max-width: 875px;
+}
+
+.analytics-intro__content {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .analitics-process__top {
@@ -7341,6 +7351,10 @@ button.swiper-pagination-bullet {
     font-size: 1.5rem;
   }
 
+  .analytics-intro__title {
+    font-size: 10rem;
+  }
+
   .analitics-process__top {
     margin-bottom: 5rem;
   }
@@ -9482,10 +9496,10 @@ button.swiper-pagination-bullet {
   }
 
   .strategy-relevant__item-img {
-    margin: 0 auto;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    margin: 0 auto !important;
+    -webkit-box-ordinal-group: 3 !important;
+        -ms-flex-order: 2 !important;
+            order: 2 !important;
   }
 
   .technical-intro__title {
@@ -9569,6 +9583,10 @@ button.swiper-pagination-bullet {
 
   .analytics-intro__text {
     font-size: 1rem;
+  }
+
+  .analytics-intro__title {
+    font-size: 4.0625rem;
   }
 
   .analitics-process__top {
@@ -10181,6 +10199,18 @@ button.swiper-pagination-bullet {
 @supports not (font-size: clamp( 1rem , 0.6666859563rem  +  0.925904493vw , 1.5rem )) {
     .analytics-intro__text {
       font-size: calc(1rem + 0.5 * (100vw - 35.99875rem) / 54.00125);
+    }
+}
+
+@supports (font-size: clamp( 4.0625rem , 0.1043957316rem  +  10.9951158538vw , 10rem )) {
+    .analytics-intro__title {
+      font-size: clamp( 4.0625rem , 0.1043957316rem  +  10.9951158538vw , 10rem );
+    }
+}
+
+@supports not (font-size: clamp( 4.0625rem , 0.1043957316rem  +  10.9951158538vw , 10rem )) {
+    .analytics-intro__title {
+      font-size: calc(4.0625rem + 5.9375 * (100vw - 35.99875rem) / 54.00125);
     }
 }
 
