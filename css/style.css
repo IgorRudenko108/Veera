@@ -2945,7 +2945,7 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
 
 .allprograms-intro__subtitle {
   text-align: right;
-  margin-top: auto;
+  margin-top: auto !important;
 }
 
 .allprograms-category__section {
@@ -3829,6 +3829,11 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
 
 .analytics-intro__text {
   max-width: 875px;
+}
+
+.analytics-intro__title {
+  text-align: left;
+  margin-right: auto;
 }
 
 .analytics-intro__content {
@@ -5184,7 +5189,7 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
 
 .payments__section {
   margin: 60px 0 0;
-  padding: 10px 0 0;
+  padding: 10px 0 15px;
 }
 
 .payments__container,
@@ -5331,7 +5336,6 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: calc(100dvh - 70px);
 }
 
 .payments__aside::after {
@@ -5419,49 +5423,11 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   background-color: #fff;
   -webkit-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
   height: 100%;
-}
-
-.payments__cards-item:hover {
-  background-color: #00519E;
-  -webkit-transition: background-color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.payments__cards-item:hover .payments__cards-title,
-.payments__cards-item:hover .payments__cards-punkt p,
-.payments__cards-item:hover .payments__cards-price {
-  color: #fff;
-  -webkit-transition: color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out;
-}
-
-.payments__cards-item:hover .payments__cards-bottom svg {
-  fill: #00519E;
-  -webkit-transition: fill 0.2s ease-in-out;
-  transition: fill 0.2s ease-in-out;
-}
-
-.payments__cards-item:hover .payments__cards-btn {
-  background-color: #fff;
-  -webkit-transition: background-color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.payments__cards-item:hover .payments__cards-punkt svg {
-  fill: #fff;
-  -webkit-transition: fill 0.2s ease-in-out;
-  transition: fill 0.2s ease-in-out;
-}
-
-.payments__cards-item:hover .payments__cards-title {
-  border-color: #fff;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 }
 
 .payments__cards-title {
@@ -7150,6 +7116,44 @@ button.swiper-pagination-bullet {
   .index-blog__item:hover .index-blog__arrow svg {
     fill: #fff;
   }
+
+  .payments__cards-item:hover {
+    background-color: #00519E;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .payments__cards-item:hover .payments__cards-title,
+  .payments__cards-item:hover .payments__cards-punkt p,
+  .payments__cards-item:hover .payments__cards-price {
+    color: #fff;
+    -webkit-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .payments__cards-item:hover .payments__cards-bottom svg {
+    fill: #00519E;
+    -webkit-transition: fill 0.2s ease-in-out;
+    transition: fill 0.2s ease-in-out;
+  }
+
+  .payments__cards-item:hover .payments__cards-btn {
+    background-color: #fff;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .payments__cards-item:hover .payments__cards-punkt svg {
+    fill: #fff;
+    -webkit-transition: fill 0.2s ease-in-out;
+    transition: fill 0.2s ease-in-out;
+  }
+
+  .payments__cards-item:hover .payments__cards-title {
+    border-color: #fff;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
 }
 
 @media (min-width: 74.99875em) {
@@ -8121,9 +8125,9 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 360px) {
   .index-form__inner {
-    padding: 30px 10px;
+    padding: 15px 10px !important;
   }
 }
 
@@ -8687,6 +8691,9 @@ button.swiper-pagination-bullet {
 
   .allprograms-intro__content {
     margin-left: auto;
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
   }
 
   .allprograms-category__section {
@@ -9118,10 +9125,6 @@ button.swiper-pagination-bullet {
     min-height: calc(100dvh - 60px);
   }
 
-  .payments__aside {
-    min-height: calc(100dvh - 60px);
-  }
-
   .order__form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -9415,6 +9418,10 @@ button.swiper-pagination-bullet {
     font-size: 1rem;
   }
 
+  .index-form__inner {
+    padding: 15px;
+  }
+
   .index-form__title {
     font-size: 2.8125rem;
   }
@@ -9600,6 +9607,11 @@ button.swiper-pagination-bullet {
 
   .analytics-intro__title {
     font-size: 4.0625rem;
+  }
+
+  .analytics-intro__title {
+    text-align: center;
+    margin: 0 auto;
   }
 
   .analitics-process__top {
@@ -9870,6 +9882,7 @@ button.swiper-pagination-bullet {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-bottom: 20px;
   }
 
   .payments__top-box {

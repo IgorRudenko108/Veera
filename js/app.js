@@ -2954,7 +2954,7 @@
             observeParents: true,
             slidesPerView: "auto",
             spaceBetween: 20,
-            speed: 1e3,
+            speed: 800,
             centeredSlides: true,
             loop: true,
             navigation: {
