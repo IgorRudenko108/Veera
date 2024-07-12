@@ -7876,6 +7876,7 @@ button.swiper-pagination-bullet {
 
   .header-dropdown__link-name {
     font-size: 18px;
+    line-height: 150%;
   }
 
   .index-services__item-main {
