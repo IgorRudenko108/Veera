@@ -1,0 +1,14 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M25 25H37.5V12.5C30.6111 12.5 25 18.1111 25 25Z" fill="#074CBA"/>
+<path d="M12.5 12.5H25V25C18.1111 25 12.5 19.4167 12.5 12.5Z" fill="#074CBA"/>
+<path d="M25 25H12.5V37.5C19.3889 37.5 25 31.9167 25 25Z" fill="#074CBA"/>
+<path d="M37.5 37.5H25V25C31.8889 25 37.5 30.6111 37.5 37.5Z" fill="#074CBA"/>
+<path d="M12.5 12.5V0H25L12.5 12.5Z" fill="#074CBA"/>
+<path d="M37.5 12.5V0H25L37.5 12.5Z" fill="#074CBA"/>
+<path d="M37.5 37.5V50H25L37.5 37.5Z" fill="#074CBA"/>
+<path d="M12.5 37.5V50H25L12.5 37.5Z" fill="#074CBA"/>
+<path d="M37.5 37.5H50V25L37.5 37.5Z" fill="#074CBA"/>
+<path d="M37.5 12.5H50V25L37.5 12.5Z" fill="#074CBA"/>
+<path d="M12.5 12.5H0V25L12.5 12.5Z" fill="#074CBA"/>
+<path d="M12.5 37.5H0V25L12.5 37.5Z" fill="#074CBA"/>
+</svg>
