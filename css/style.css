@@ -3461,7 +3461,9 @@ body._touch .header-dropdown.dropdown-open > .dropdown-list {
   transition: all 0.2s ease-in-out;
 }
 
-.strategy-relevant__item img {
+.strategy-relevant__item-img,
+.strategy-relevant__item img,
+.strategy-relevant__item picture {
   width: 130px;
   margin: auto 0 0 auto;
 }
@@ -8776,7 +8778,9 @@ button.swiper-pagination-bullet {
     padding: 80px 0;
   }
 
-  .strategy-relevant__item img {
+  .strategy-relevant__item-img,
+  .strategy-relevant__item img,
+  .strategy-relevant__item picture {
     width: 105px;
   }
 
@@ -9502,7 +9506,9 @@ button.swiper-pagination-bullet {
     text-align: center;
   }
 
-  .strategy-relevant__item img {
+  .strategy-relevant__item-img,
+  .strategy-relevant__item img,
+  .strategy-relevant__item picture {
     margin: 0 auto !important;
     -webkit-box-ordinal-group: 3 !important;
         -ms-flex-order: 2 !important;
